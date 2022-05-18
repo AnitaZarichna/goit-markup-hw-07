@@ -8,7 +8,7 @@
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  color: var(--title-text-color);
+  color: $title-text-color;
   margin-bottom: 50px;
 }
 .works__list {
@@ -16,10 +16,11 @@
 }
 .works__img {
   display: block;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-.works__img:not(:last-child) {
-  margin-right: 30px;
-}
+
 .works__text {
   display: block;
   position: relative;
@@ -36,7 +37,7 @@
   justify-content: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--p-text-color);
+  color: $p-text-color;
   background-color: rgba(47, 48, 58, 0.8);
   transform: translateY(-100%);
 }

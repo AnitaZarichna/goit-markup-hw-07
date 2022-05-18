@@ -1,6 +1,6 @@
 /* -------------------------------Футер-------------------------------------- */
 .footer {
-  background: var(--footer-background);
+  background: $footer-background;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -14,12 +14,12 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  color: var(--footer-logo-color);
+  color: $footer-logo-color;
   display: block;
   margin-bottom: 20px;
 }
 .footer__logo__web {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 .footer-address {
   display: block;
@@ -27,7 +27,7 @@
 .footer-adress__text {
   font-style: normal;
   line-height: 1.71;
-  color: var(--p-text-color);
+  color: $p-text-color;
 }
 .footer-adress__item:not(:last-child) {
   margin-bottom: 9px;
@@ -35,12 +35,12 @@
 .footer-adress__link {
   font-style: normal;
   line-height: 1.71;
-  color: var(--footer-link);
-  transition: color 250ms var(--animation);
-}
-.footer-adress__link:hover,
-.footer-adress__link:focus {
-  color: var(--accent-color);
+  color: $footer-link;
+  transition: color 250ms $animation;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 /* Контакты */
 .connect {
@@ -51,7 +51,7 @@
   text-transform: uppercase;
   margin-bottom: 20px;
 
-  color: var(--footer-logo-color);
+  color: $footer-logo-color;
 }
 .footer-social {
   margin-left: 70px;
@@ -64,7 +64,7 @@
 }
 .footer-social__icon {
   display: flex;
-  color: var(--footer-logo-color);
+  color: $footer-logo-color;
   fill: currentColor;
   width: 44px;
   height: 44px;
@@ -72,12 +72,13 @@
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  transition: background-color 250ms var(--animation);
+  transition: background-color 250ms $animation;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }
-.footer-social__icon:hover,
-.footer-social__icon:focus {
-  background-color: var(--accent-color);
-}
+
 .footer__subscribe {
   display: block;
   margin-left: 93px;
@@ -90,7 +91,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
-  color: var(--footer-logo-color);
+  color: $footer-logo-color;
 }
 .footer-form__container {
   display: flex;
@@ -103,7 +104,7 @@
   line-height: 1.25;
   margin: 0;
   padding: 15px 16px;
-  color: var(--p-text-color);
+  color: $p-text-color;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -122,22 +123,23 @@
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  color: var(--btn-text-color);
-  background-color: var(--accent-color);
+  color: $btn-text-color;
+  background-color: $accent-color;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
-  transition: background-color 250ms var(--animation), filter var(--animation);
+  transition: background-color 250ms $animation, filter $animation;
+
+  &:hover,
+  &:focus {
+    background-color: $hero-btn-hover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
 }
+
 .footer-form__icon {
   display: block;
   margin-left: 10px;
   fill: currentColor;
-}
-
-.footer-form__button:hover,
-.footer-form__button:focus {
-  background-color: var(--hero-btn-hover);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }

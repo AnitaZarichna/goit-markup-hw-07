@@ -9,20 +9,7 @@
 .site-nav {
   display: flex;
 }
-.logo {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--primary-logo-color);
-  align-items: center;
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 25px;
-}
-.logo-web {
-  color: var(--accent-color);
-}
+
 .header-list {
   display: flex;
   margin-left: 93px;
@@ -32,39 +19,40 @@
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--title-text-color);
+  color: $title-text-color;
   align-items: center;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition: color 250ms var(--animation);
+  transition: color 250ms $animation;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &.current {
+    color: $accent-color;
+  }
 }
 .header-list .header-nav__item:not(:last-child) {
   margin-right: 50px;
 }
-.header-link:hover,
-.header-link:focus {
-  color: var(--accent-color);
-}
 
-.header-link.current {
-  color: var(--accent-color);
-}
 .header-current {
   display: block;
   position: relative;
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
 }
-.header-current::after {
-  display: block;
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-}
+
 /* Контакты */
 .header-adress {
   display: flex;
@@ -76,18 +64,19 @@
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition: color 250ms var(--animation);
+  transition: color 250ms $animation;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 .header-adress .header-adress__item:not(:last-child) {
   margin-right: 30px;
 }
-.header-adress__link:hover,
-.header-adress__link:focus {
-  color: var(--accent-color);
-}
+
 .icon-mail {
   width: 16px;
   height: 12px;

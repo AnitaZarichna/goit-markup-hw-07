@@ -1,6 +1,6 @@
 /* Наша команда */
 .team {
-  background-color: var(--section-background);
+  background-color: $section-background;
   display: flex;
   flex-direction: column;
 }
@@ -11,8 +11,8 @@
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  color: var(--title-text-color);
-  letter-spacing: var(--main-letter-spacing);
+  color: $title-text-color;
+  letter-spacing: $main-letter-spacing;
 }
 .team__list {
   display: flex;
@@ -24,11 +24,12 @@
   align-items: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  background-color: var(--background-color);
+  background-color: $background-color;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-.team__item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .team__img {
   display: block;
 }
@@ -39,13 +40,13 @@
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  color: var(--title-text-color);
+  color: $title-text-color;
 }
 .team__text {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
   margin-bottom: 16px;
 }
 .team__card {
@@ -58,23 +59,24 @@
 }
 .social__item {
   margin-right: 10px;
+  &:last-child {
+    margin: 0;
+  }
 }
-.social__item:last-child {
-  margin: 0;
-}
+
 .social__link {
   display: flex;
   width: 44px;
   height: 44px;
   align-items: center;
   justify-content: center;
-  color: var(--social-link);
+  color: $social-link;
   fill: currentColor;
   border-radius: 50px;
-  transition: background-color 250ms var(--animation), color 250ms var(--animation);
-}
-.social__link:hover,
-.social__link:focus {
-  background-color: var(--accent-color);
-  color: var(--btn-text-color);
+  transition: background-color 250ms $animation, color 250ms $animation;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $btn-text-color;
+  }
 }
