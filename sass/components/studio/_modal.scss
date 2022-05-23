@@ -72,6 +72,7 @@
   margin-bottom: 4px;
 }
 .modal-field {
+  position: relative;
   margin-bottom: 10px;
   display: block;
   &:last-child {
@@ -101,27 +102,29 @@ input:hover + .icon,
 input:focus + .icon {
   fill: $accent-color;
 }
-.name-input,
-.tel-input,
-.mail-input {
-  position: relative;
-}
+
 .modal__name {
   display: block;
   position: absolute;
-  top: 11px;
+  width: 18px;
+  height: 18px;
+  bottom: 9px;
   left: 12px;
 }
 .modal__phone {
   display: block;
   position: absolute;
-  top: 11px;
+  width: 18px;
+  height: 18px;
+  bottom: 9px;
   left: 12px;
 }
 .modal__mail {
   display: block;
   position: absolute;
-  top: 11px;
+  width: 18px;
+  height: 18px;
+  bottom: 9px;
   left: 12px;
 }
 .comentary {
@@ -161,6 +164,7 @@ input:focus + .icon {
   line-height: 1.71;
   letter-spacing: $main-letter-spacing;
   color: $primary-text-color;
+
   &::before {
     content: "";
     cursor: pointer;
@@ -174,7 +178,7 @@ input:focus + .icon {
   }
 }
 
-.input-check:checked + .check-text::before {
+.input-check:checked + .check__text::before {
   background-color: $accent-color;
   border: none;
   background-image: url(/img/icon-check.svg);
